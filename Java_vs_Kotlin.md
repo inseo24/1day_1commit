@@ -14,15 +14,15 @@ val import = "ok"
 // val val = "x"
 
 /*
-    * fun 같은 키워드는 자바에선 사용되지 않으나, 코틀린에서는 키워드로 사용함
-    * 그러다 보니 자바에선 식별자로 사용 가능한데, 코틀린에서는 사용할 수 없어서 역따옴표(`)로 감싸서 식별자 사용을 허용함
-    *
-    * 그럼 역따옴표 감싸서 쓰는 건 왜 허용했냐
-    * 1. 코틀린에서 자바에서 정의한 식별자를 사용해야 하는 경우가 있을 수 있어서 허용
-    * 2. 테스트케이스에서 메서드 이름 쓸 때 유용함
-    * @Test fun `2 + 2 should be 4`() { (2 + 2) shouldBe 4 }
-    *
-    * */
+ * fun 같은 키워드는 자바에선 사용되지 않으나, 코틀린에서는 키워드로 사용함
+ * 그러다 보니 자바에선 식별자로 사용 가능한데, 코틀린에서는 사용할 수 없어서 역따옴표(`)로 감싸서 식별자 사용을 허용함
+ *
+ * 그럼 역따옴표 감싸서 쓰는 건 왜 허용했냐
+ * 1. 코틀린에서 자바에서 정의한 식별자를 사용해야 하는 경우가 있을 수 있어서 허용
+ * 2. 테스트케이스에서 메서드 이름 쓸 때 유용함
+ * @Test fun `2 + 2 should be 4`() { (2 + 2) shouldBe 4 }
+ *
+ * */
 val `fun` = "ok"
 //        val fun = "x"
 
@@ -63,14 +63,13 @@ var c: Int
 
 ```java
 // java는 가변이 디폴트
-    public int increment(int num) {
-        return num++;
-    }
+public int increment(int num) {
+  return num++;
+}
 
-    public void test() {
-
-        var result = increment(3);
-    }
+public void test() {
+  var result = increment(3);
+}
 ```
 
 ```kotlin
@@ -79,9 +78,7 @@ var c: Int
 * 코틀린은 함수 파라미터가 무조건 불변임. 아래 코드는 에러
 * */
 fun increment(n: Int): Int {
-
-//            return n++
-
+ // return n++
 }
 ```
 
