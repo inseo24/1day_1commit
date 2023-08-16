@@ -1,0 +1,38 @@
+### 1. The Cloud Native Application
+
+- 목표
+    - 컴포넌트의 isolation 증가
+    - 장점
+        - 더 빠르게 개발, 배포 가능
+        - 책임 소재가 명확해짐
+        - SPOT이 줄어듦
+    - 단점
+        - 복잡성 증가
+
+- 플랫폼 : 애플리케이션 개발에 도움이 되는 기능의 집합
+    - 개발자들이 비즈니스 로직에 집중할 수 있게 그 외의 것을 도구로 제공
+
+- 클라우드 서비스 장점
+    - Scale, Performance, Availability
+    - 리소스를 프로그래밍적으로 접근 가능
+    - 데이터 센터를 직접 구축 및 관리하는 것에 비해 비용 감소
+    - 글로벌 서비스를 할 때, 해당 리전을 사용해 더 빠른 서빙이 가능
+    - Scalability
+        - 어떤 시스템이 확장 되면서 비용이 증가 하더라도 그에 따른 가치가 증가한다면 그 시스템은 확장성을 가지고 있다고 볼 수 있다.
+        - 확장성을 예측하지 못하는 것은 위험을 수반하는데, 예상치 못한 부하로 인해 팀 간 커뮤니케이션 문제가 발생할 수 있으며 애플리케이션의 신뢰성을 떨어뜨릴 수 있다.
+    - Reliability
+        - 애플리케이션이 생산하는 가치를 얼마나 신뢰성 있게 예측 가능하게 하는지
+    - Agile
+        
+        
+
+### 3. 12 Factors Config
+
+- 스프링 부트 설정 정보 우선 순위
+    - command line argument
+    - java:comp/env에 있는 JNDI 속성
+    - 운영체제 환경변수
+    - jar 외부의 application.yml or application.properties
+    - jar 내부의 application.yml or application.properties
+    - `@Configuration` 클래스의 `@PropertySource`
+    - `SpringApplication.getDefaultProperties()`
