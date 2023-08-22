@@ -1,0 +1,22 @@
+- [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/)
+
+```kotlin
+class Solution {
+    fun lengthOfLIS(nums: IntArray): Int {
+        val result = mutableListOf<Int>()
+        
+        for (num in nums) {
+            if (result.isEmpty() || num > result.last()) {
+                result.add(num)
+            } else {
+                val pos = result.binarySearch(num)
+                if (pos < 0) {
+                    result[-pos-1] = num
+                }
+            }
+        } 
+
+        return result.size
+    }
+}
+```
